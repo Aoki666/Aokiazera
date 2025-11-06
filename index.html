@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Background Video ===== -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="images/vid.mp4.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- ===== Background Music ===== -->
+    <audio id="bgMusic" loop>
+        <source src="images/musik.mp3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- ===== Tombol Mute/Unmute ===== -->
+    <button id="muteBtn">
+        🔇
+    </button>
+
+    <!-- ===== Konten Utama ===== -->
+    <div class="container">
+        <div class="card" data-tilt>
+            <img src="images/ikandaun.png.jpg" alt="Profile Picture">
+            <h2>HI THERE!</h2><br><br>
+            <h3>You can check my social media and see my portfolio website below.</h3><br><br>
+            <h4>Love it What You Like :)</h4>
+            <p>============</p><br><br>
+            <p>↓ This is My Social Media ↓</p>
+
+            <div class="link">
+                <a href="https://www.instagram.com/callme.okii?igsh=bzR0amw4Y3UzN2Ru"><img src="images/Instagram-2.png"></a>
+                <a href="https://www.tiktok.com/@aokiazera?_r=1&_t=ZS-912Xgjn9J2a"><img src="images/Tiktok-1.png"></a>
+                <a href="https://www.facebook.com/share/17dYpec57v/?mibextid=wwXIfr"><img src="images/Facebook-1.png"></a>
+                <a href="https://linktr.ee/aokiazeraakuma"><img src="images/linktree.jpg"></a>
+
+                <a href="profile.html">
+                    <button class="btn fourth">My Portfolio Website</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="vanilla-tilt.babel.min.js"></script>
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        const muteBtn = document.getElementById("muteBtn");
+        let isMuted = true;
+
+        muteBtn.addEventListener("click", () => {
+            if (isMuted) {
+                bgMusic.play();
+                muteBtn.textContent = "🔊";
+                isMuted = false;
+            } else {
+                bgMusic.pause();
+                muteBtn.textContent = "🔇";
+                isMuted = true;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
